@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME</title>
+<style>
+    body {
+    	background-image: url('https://images.pexels.com/photos/9001965/pexels-photo-9001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: contain;
+        background-repeat: no-repeat;
+  		background-attachment: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    
+    img {
+    	position: absolute;
+    	z-index: 100;
+    	top: 350px;
+    	left: 0;
+    	width: 540px;
+    	height: 300px;
+    	object-fit: cover;
+	}
+    
+    ul {
+  		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+        text-align: center;
+	}
+
+	li a {
+  		display: block;
+        text-decoration: none;
+        color: #d4cdf4;
+	}
+    
+    .main {
+    	color: #7a6f9b;
+        background-color: #d4cdf4;
+        height: 1000px;
+        position: relative;
+        top: 700px;
+        box-shadow: 0px 0px 50px 150px rgb(212,205,244, 1);
+    }
+    
+    li a:hover {
+    	color: white;
+        transition: 0.4s ease 0.1s;
+        cursor: pointer;
+    }
+    
+    .navbar {
+    	background-color: #685155;
+        color: #d4cdf4;
+        padding: 50px 50px;
+        width: fit-content;
+        font-size: 45px;
+        position: fixed;
+        right: 100px;
+        top: 450px;
+        box-shadow: 0px 0px 20px rgb(104,81,85,1);
+        
+        
+    }
+    
+    hr.solid {
+  		border-top: 1.5px solid;
+        width: 100%;
+        margin: auto;
+        opacity: 0.8;
+        
+	}
+    
+    h1 {
+    	font-size: 70px;
+        font-weight: normal;
+        position: absolute;
+        top: -50px;
+        padding: 0px 100px;
+    }
+    
+    @media (min-width: 1554px) {
+      body {
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 1554px) {
+      body {
+        background-size: contain;
+      }
+    }
+    
+    .footer {
+    	position: fixed;
+      	left: 0;
+      	bottom: 0;
+      	width: 100%;
+        text-align: center;
+        background-color: rgb(109,98,141,0.45);
+        color: white;
+        padding-bottom: 10px;
+        box-shadow: 0px 0px 120px 130px rgb(109,98,141,0.45);
+    }
+</style>
+</head>
+<body>
+
+<div class="main"><h1>GALLERY</h1></div>
+<img src="https://media.discordapp.net/attachments/591823026325291008/1112072010906996786/trims.png?width=900&height=500" alt="e">
+<div class="navbar">
+	<ul>
+    	<li><a href="google.com">Contact</a></li>
+        <hr class="solid">
+        <li><a href="#members">Members</a></li>
+        <hr class="solid">
+        <li><a href="#schedule">Schedule</a></li>
+    </ul>
+</div>
+<div class="footer">Copyright 2023 &copy; TRIMS</div>
+</body>
+</html>
