@@ -15,8 +15,8 @@
     	top: 0px;
     	left: 0px;
         padding: 10px;
-    	width: 180px;
-    	height: 100px;
+    	width: 252px;
+    	height: 140px;
     	object-fit: cover;
 	}
     
@@ -27,8 +27,21 @@
     	border-radius: 50%;
     	overflow: hidden;
     	margin: 0 auto;
+        top: 100px;
+        
 	}
-
+    
+    .memberprofile::after {
+  		border-radius: 50%;
+  		background: radial-gradient(transparent 60%, rgba(212,205,244, 1) 70%);
+  		content: '';
+  		display: block;
+  		position: absolute;
+  		top: 0;
+        height: 100%;
+  		width: 100%;
+	}
+    
 	.memberprofile img {
     	width: 100%;
     	height: 100%;
@@ -68,11 +81,16 @@
         text-align: center;
         
 	}
-
+    
+    li {
+    	display: inline-block;
+    }
 	li a {
   		display: block;
         text-decoration: none;
         color: #d4cdf4;
+        padding: 14px 16px;
+        text-align: center;
 	}
     
     .main {
@@ -80,6 +98,9 @@
         background-color: #d4cdf4;
         position: relative;
         top: 100px;
+        display: flex;
+        justify-content: space-around;
+        
     }
     
     li a:hover {
@@ -90,16 +111,16 @@
     
     .navbar {
     	background-color: #685155;
-        color: #d4cdf4;
-        padding: 50px 50px;
-        width: fit-content;
-        font-size: 45px;
-        position: fixed;
-        right: 100px;
-        top: 450px;
-        box-shadow: 0px 0px 20px rgb(104,81,85,1);
-        z-index: 99;
-    }
+    	color: #d4cdf4;
+    	width: 100%;
+    	font-size: 45px;
+    	position: fixed;
+    	top: 0px;
+    	box-shadow: 0px 0px 20px rgb(104, 81, 85, 1);
+    	z-index: 99;
+    	display: flex;
+    	justify-content: center;
+	}
     
     hr.solid {
   		border-top: 1.5px solid;
@@ -134,29 +155,29 @@
 </style>
 </head>
 <body>
-<img class="logo" src="https://media.discordapp.net/attachments/591823026325291008/1112072010906996786/trims.png?width=900&height=500" alt="TRIMS LOGO">
-<div class="main"><h1>MEMBERS</h1></div>
-<div class="memberprofile" id="natasha">
-	<p>Natasha Coleman</p>
-    <img src="https://images.pexels.com/photos/9002833/pexels-photo-9002833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Natasha">
+<img class="logo" src="https://media.discordapp.net/attachments/784390283701256192/1112151803707011102/trims2.png?width=900&height=500" alt="TRIMS LOGO">
+<div class="main">
+	<h1>MEMBERS</h1>
+	<div class="memberprofile" id="natasha">
+		<p>Natasha Coleman</p>
+    	<img src="https://images.pexels.com/photos/9002833/pexels-photo-9002833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Natasha">
     
-</div>
-<div class="memberprofile" id="chris">
-	<p>Christopher Astafyev</p>
-	<img src="https://images.pexels.com/photos/9002850/pexels-photo-9002850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Christopher">
-</div>
-<div class="memberprofile" id="camille">
-	<p>Camille Brown</p>
-    <img src="https://images.pexels.com/photos/9002818/pexels-photo-9002818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Camille">
-</div>
-<div class="navbar">
-	<ul>
-    	<li><a href="contact.html">Contact</a></li>
-        <hr class="solid">
-        <li><a href="members.html">Members</a></li>
-        <hr class="solid">
-        <li><a href="schedule.html">Schedule</a></li>
-    </ul>
+	</div>
+	<div class="memberprofile" id="chris">
+		<p>Christopher Astafyev</p>
+		<img src="https://images.pexels.com/photos/9002850/pexels-photo-9002850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Christopher">
+	</div>
+	<div class="memberprofile" id="camille">
+		<p>Camille Brown</p>
+    	<img src="https://images.pexels.com/photos/9002818/pexels-photo-9002818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Camille">
+	</div>
+	<div class="navbar">
+		<ul>
+    		<li><a href="contact.html">Contact</a></li>
+        	<li><a href="members.html">Members</a></li>
+        	<li><a href="schedule.html">Schedule</a></li>
+    	</ul>
+	</div>
 </div>
 <div class="footer">Copyright 2023 &copy; TRIMS</div>
 </body>
