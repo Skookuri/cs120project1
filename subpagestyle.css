@@ -1,4 +1,4 @@
-body {
+	body {
     	background-color:#d4cdf4; 
     }
     
@@ -32,3 +32,7 @@ body {
         padding: 14px 16px;
         text-align: center;
 	}
+    
+	a.active {
+    	color: #fff;
+    }
