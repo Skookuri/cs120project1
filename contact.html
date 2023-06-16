@@ -4,110 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/globalstyle.css">
+<link rel="stylesheet" href="https://skookuri.github.io/cs120project1/subpagestyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <title>CONTACT</title>
-<style>
-    body {
-    	background-color:#d4cdf4; 
-    }
-    
-    .logo {
-    	position: fixed;
-    	top: 0px;
-    	left: 0px;
-        padding: 10px;
-    	width: 252px;
-    	height: 140px;
-	}
-    
-    .memberprofile {
-    	position: relative;
-    	width: 400px;
-    	height: 400px;
-    	border-radius: 50%;
-    	overflow: hidden;
-    	margin: 0 auto;
-        top: 100px;
-        
-	}
-    
-    .memberprofile::after {
-  		border-radius: 50%;
-  		background: radial-gradient(transparent 60%, rgba(212,205,244, 1) 70%);
-  		content: '';
-  		display: block;
-  		position: absolute;
-  		top: 0;
-        height: 100%;
-  		width: 100%;
-	}
-    
-	.memberprofile img {
-    	width: 100%;
-    	height: 100%;
-    	object-fit: cover;
-        object-position: center top;
-	}
-    
-    .memberprofile:hover {
-    	opacity: 0.7;
-        cursor: pointer;
-        transition: 0.4s ease 0.1s;
-    }
-    
-    .memberprofile p {
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%);
-    	text-align: center;
-    	color: white;
-    	font-size: 24px;
-    	font-weight: bold;
-    	z-index: 2;
-        opacity: 0;
-	}
-    
-    .description {
-    	color: white;
-        background-color: red;
-        padding: 10px;
-        font-size: 50px;
-        z-index: 3;
-        position: absolute;
-        opacity: 1;
-        top: 50%;
-        left: 50%;
-    }
-    
-    .memberprofile:hover p {
-    	opacity: 1;
-        transition: 0.4s ease 0.1s;
-    }
-    
-    
-    li {
-    	display: inline-block;
-    }
-    
-	li a {
-  		padding: 14px 16px;
-        text-align: center;
-	}
-    
-    .main {
-    	top: 100px;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .navbar {
-    	width: 100%;
-    	top: 0px;
-    	display: flex;
-    	justify-content: center;
-	}
-
-    
+<style>    
     form {
     	position: relative;
         width: fit-content;
@@ -135,7 +35,7 @@
     
     label {
     	padding-right: 5px;
-    }    
+    }
 </style>
 </head>
 <body>
@@ -144,28 +44,34 @@
 	<h1>CONTACT</h1>
 	<div class="navbar">
 		<ul>
-    		<li><a href="contact.html">Contact</a></li>
+    		<li><a href="contact.html" class="active">Contact</a></li>
         	<li><a href="members.html">Members</a></li>
         	<li><a href="schedule.html">Schedule</a></li>
     	</ul>
 	</div>
     <div>
-    <form>
+    <form action="javascript:void(0);">
     	<label for="email">Email:</label>
-        <input type="email" id="email"></input>
+        <input type="email" id="email" required></input>
         <br><br>
         <label for="title">Title:</label>
-        <input type="text" id="title"></input>
+        <input type="text" id="title" required></input>
         <br><br>
         <label for="msg">Message:</label>
         <br>
-        <textarea id="msg"></textarea>
+        <textarea id="msg" required></textarea>
         <br><br>
-        <button>Submit</button>
+        <button id="submitbtn">Submit</button>
     </form>
     </div>
 </div>
 <div class="footer">Copyright 2023 &copy; TRIMS</div>
+<script>
+$("#submitbtn").click(function(){
+  if ($("#email").val() && $("#title").val() && $("#msg").val()) {
+  	alert("Thanks for the submission!");
+  }
+});
+</script>
 </body>
 </html>
-
