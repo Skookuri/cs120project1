@@ -6,3 +6,7 @@ function myFunction() {
 		x.className = "navbar";
 	}
 }
+
+$("i").click(function(){
+	$(".logo").toggle();
+});
