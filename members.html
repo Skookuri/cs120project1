@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/globalstyle.css">
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/subpagestyle.css">
+<script src="https://skookuri.github.io/cs120project1/navbarFunction.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--^^Icon for hamburger menu^^-->
+<link rel="icon" type="image/x-icon" href="https://skookuri.github.io/cs120project1/trimslogo.png">
 <title>MEMBERS</title>
 <style>
     .memberprofile {
@@ -77,11 +81,14 @@
 <img class="logo" src="https://media.discordapp.net/attachments/784390283701256192/1112151803707011102/trims2.png?width=900&height=500" alt="TRIMS LOGO">
 <div class="main">
 	<h1>MEMBERS</h1>
-	<div class="navbar">
+	<div class="navbar" id="myNav">
 		<ul>
     		<li><a href="contact.html">Contact</a></li>
         	<li><a href="members.html" class="active">Members</a></li>
         	<li><a href="schedule.html">Schedule</a></li>
+            	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            		<i class="fa fa-bars"></i>
+        	</a>
     	</ul>
 	</div>
 	<div class="memberprofile">
