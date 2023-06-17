@@ -20,7 +20,7 @@
     
     .logo {
     	position: absolute;
-    	top: 200px;
+        top: -300px;
     	left: 10px;
     	width: 540px;
     	height: 300px;
@@ -28,7 +28,7 @@
 
     
     .main {
-        height: 1000px;
+        height: fit-content;
         top: 500px;
         box-shadow: 0px 0px 50px 150px rgb(212,205,244, 1);
     }
@@ -77,8 +77,6 @@
 
 	.m_scroll_arrows {
   		display: block;
-  		width: 5px;
-  		height: 5px;
   		-ms-transform: rotate(45deg); /* IE 9 */
   		-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   		transform: rotate(45deg);
@@ -193,25 +191,43 @@
 	}
     
     @media only screen and (max-width: 652px) {
-        .logo {
-    		position: absolute;
-        	top: 60vh;
-        	left: 50%;
-        	transform: translate(-50%, -50%);
-        	object-fit: contain;
-            width: 100%;
-            height: 100%;
-		}
+		.main {
+        	display: flex;
+            justify-content: center;
+  			align-items: center;
+            flex-direction: column;
+            border: 2px solid red;
+        }
         
-          h1 {
-    		text-align: center;
-    		position: relative;
-    		left: 50%;
-    		transform: translateX(-50%);
-            top: 10px;
-    		padding: 40px;
-    		font-size: 15vw;
+        .logo {
+        	align-self: center;
+    		left: auto;
+        	object-fit: contain;
+            max-width: 100%;
+        	max-height: 100%;
+            
+        }
+        
+        .mouse_scroll {
+        	position: relative;
+        	width: 100%;
+            margin: 0 auto;
+        }
+        
+         .wrapper {
+    		padding: 50px;
+            
   		}
+        
+        /*h1 {
+        	font-size: 15vw;
+        }
+        
+        .m_scroll_arrows {
+    		width: 10vw;
+    		height: 10vw;
+    		
+        }*/
         
       	.navbar.responsive a.icon {
         	position: absolute;
@@ -244,20 +260,92 @@
             padding-left: 40px;
         }
     }
+    
+    .row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 4px;
+  		padding-bottom: 60px;
+  		justify-content: left;
+	}
+
+	/* Create four equal columns that sits next to each other */
+	.column {
+  		flex: 25%;
+  		max-width: 25%;
+  		padding: 0 4px;
+  		box-sizing: border-box;
+	}
+
+	.column img {
+  		margin-top: 8px;
+  		vertical-align: middle;
+  		opacity: 0.4;
+	}
+
+	.column img:hover {
+		opacity: 1;
+    	cursor: pointer;
+    	transition: 0.3s;
+	}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  body {
+        background-size: cover;
+        background-repeat: no-repeat;
+  		background-attachment: fixed;
+        background-position: center top; 
+    }
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 </style>
 </head>
 <body>
 <div class="main">
+	<img class="logo" src="https://media.discordapp.net/attachments/591823026325291008/1112072010906996786/trims.png?width=900&height=500" alt="TRIMS LOGO">
 	<h1>GALLERY</h1>
-    <div class="mouse_scroll default">
-		<div>
-			<span class="m_scroll_arrows unu"></span>
-			<span class="m_scroll_arrows doi"></span>
-			<span class="m_scroll_arrows trei"></span>
+    <div class="wrapper">
+    	<div class="mouse_scroll default">
+			<div>
+				<span class="m_scroll_arrows unu"></span>
+				<span class="m_scroll_arrows doi"></span>
+				<span class="m_scroll_arrows trei"></span>
+			</div>
 		</div>
+    </div>
+    <div class="row"> 
+  	<div class="column">
+    	<img src="https://images.pexels.com/photos/9008795/pexels-photo-9008795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+    	<img src="https://images.pexels.com/photos/9001969/pexels-photo-9001969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+        <img src="https://images.pexels.com/photos/9002815/pexels-photo-9002815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+    	
+  	</div>
+    <div class="column">
+    	<img src="https://images.pexels.com/photos/9010068/pexels-photo-9010068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+    	<img src="https://images.pexels.com/photos/9009535/pexels-photo-9009535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+    	<img src="https://images.pexels.com/photos/9009575/pexels-photo-9009575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+
 	</div>
+    <div class="column">
+    	<img src="https://images.pexels.com/photos/9001987/pexels-photo-9001987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+        <img src="https://images.pexels.com/photos/9001956/pexels-photo-9001956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+        
+        <img src="https://images.pexels.com/photos/9001985/pexels-photo-9001985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width:100%">
+    </div>
 </div>
-<img class="logo" src="https://media.discordapp.net/attachments/591823026325291008/1112072010906996786/trims.png?width=900&height=500" alt="TRIMS LOGO">
+
 <div class="navbar" id="myNav">
     <ul>
         <li><a href="contact.html">Contact</a></li>
@@ -270,6 +358,8 @@
         </a>
     </ul>
 </div>
+<!-- Photo Grid -->
+
 <div class="footer">Copyright 2023 &copy; TRIMS</div>
 </body>
 </html>
