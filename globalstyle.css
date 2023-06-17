@@ -69,3 +69,40 @@ body {
         padding-bottom: 10px;
         box-shadow: 0px 0px 120px 130px rgb(109,98,141,0.45);
     }
+
+    .navbar .icon {
+      	display: none;
+      	color: #d4cdf4; 
+    }
+    
+    .navbar .icon:hover {
+    	color: #fff;
+        transition: 0.3s;
+    }
+    
+    @media only screen and (max-width: 652px) {
+        
+      	.navbar.responsive a.icon {
+        	position: absolute;
+        	right: 0;
+        	top: 0;
+      	}
+        
+      	.navbar.responsive a {
+        	float: none;
+        	display: block;
+        	text-align: left;
+      	}
+	}
+    
+    
+    @media screen and (max-width: 652px) {
+      	.navbar a {
+        	display: none;
+        }
+        
+      	.navbar a.icon {
+        	float: right;
+        	display: block;
+      	}
+    }
