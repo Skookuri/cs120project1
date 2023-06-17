@@ -25,6 +25,7 @@
     	width: 540px;
     	height: 300px;
 	}
+
     
     .main {
         height: 1000px;
@@ -62,6 +63,8 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
  	}
+
+
 	.mouse_scroll {
     	position: static;
 		display: block;
@@ -70,6 +73,8 @@
 		height: 100px;
 		margin-top: 13px;
 	}
+
+
 	.m_scroll_arrows {
   		display: block;
   		width: 5px;
@@ -85,14 +90,18 @@
   		width: 30px;
   		height: 30px;
 	}
+
+
 	.unu {
   		margin-top: 1px;
 	}
+
 	.unu, .doi, .trei {
     	-webkit-animation: mouse-scroll 1s infinite;
     	-moz-animation: mouse-scroll 1s infinite;
     	animation: mouse-scroll 1s infinite;
 	}
+
 	.unu {
   		-webkit-animation-delay: .1s;
   		-moz-animation-delay: .1s;
@@ -101,6 +110,7 @@
   		animation-direction: alternate;
   		animation-delay: alternate;
 	}
+
 	.doi {
   		-webkit-animation-delay: .2s;
   		-moz-animation-delay: .2s;
@@ -109,6 +119,7 @@
   		animation-direction: alternate;
   		margin-top: -6px;
 	}
+
 	.trei {
   		-webkit-animation-delay: .3s;
   		-moz-animation-delay: .3s;
@@ -119,25 +130,32 @@
   
   		margin-top: -6px;
 	}
+
+
+
 	@-webkit-keyframes mouse-scroll {
+
   	0%   { opacity: 0;}
   	50%  { opacity: .5;}
   	100% { opacity: 1;}
 	}
 	
     @-moz-keyframes mouse-scroll {
+
   	0%   { opacity: 0; }
   	50%  { opacity: .5; }
   	100% { opacity: 1; }
 	}
     
 	@-o-keyframes mouse-scroll {
+
   	0%   { opacity: 0; }
   	50%  { opacity: .5; }
   	100% { opacity: 1; }
 	}
     
 	@keyframes mouse-scroll {
+
   	0%   { opacity: 0; }
   	50%  { opacity: .5; }
   	100% { opacity: 1; }
@@ -177,7 +195,7 @@
     @media only screen and (max-width: 652px) {
         .logo {
     		position: absolute;
-        	top: 533px;
+        	top: 60vh;
         	left: 50%;
         	transform: translate(-50%, -50%);
         	object-fit: contain;
@@ -189,7 +207,8 @@
     		text-align: center;
     		position: relative;
     		left: 50%;
-    		transform: translate(-50%, 100%);
+    		transform: translateX(-50%);
+            top: 10px;
     		padding: 40px;
     		font-size: 15vw; /* Adjust the font size as needed */
   		}
