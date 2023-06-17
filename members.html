@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/subpagestyle.css">
 <script src="https://skookuri.github.io/cs120project1/navbarFunction.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--^^Icon for hamburger menu^^-->
+<!-- ^^Icon for hamburger menu^^ -->
 <link rel="icon" type="image/x-icon" href="https://skookuri.github.io/cs120project1/trimslogo.png">
 <title>MEMBERS</title>
 <style>
+    
     .memberprofile {
     	position: relative;
     	width: 400px;
@@ -52,7 +53,8 @@
     	left: 50%;
     	transform: translate(-50%, -50%);
     	text-align: center;
-    	color: white;
+    	color: #fff;
+        text-shadow: 2px 2px #7a6f9b;
     	font-size: 24px;
     	font-weight: bold;
     	z-index: 2;
@@ -60,7 +62,7 @@
 	}
     
     .description {
-    	color: white;
+    	color: #fff;
         background-color: red;
         padding: 10px;
         font-size: 50px;
@@ -74,6 +76,22 @@
     .memberprofile:hover p {
     	opacity: 1;
         transition: 0.4s ease 0.1s;
+    }
+    
+    @media only screen and (max-width: 600px) {
+    	.memberprofile {
+        	width: 100%;
+    	}
+
+        .main {
+        	display: flex;
+        	flex-direction: column;
+        	align-items: center;
+        }
+
+        .memberprofile:not(:last-child) {
+        	margin-bottom: 20px;
+        }
     }
 </style>
 </head>
@@ -105,9 +123,9 @@
     	<img src="https://images.pexels.com/photos/9002818/pexels-photo-9002818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Camille">
 	</div>
     <a href="https://skookuri.github.io/cs120project1/">
-    	<div class="back">
+    		<div class="back">
             <i class="arrow"></i>
-    	</div>
+    		</div>
 	</a>
 </div>
 <div class="footer">Copyright 2023 &copy; TRIMS</div>
