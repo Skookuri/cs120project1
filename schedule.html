@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/globalstyle.css">
 <link rel="stylesheet" href="https://skookuri.github.io/cs120project1/subpagestyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--^^Icon for hamburger menu^^-->
+<link rel="icon" type="image/x-icon" href="https://skookuri.github.io/cs120project1/trimslogo.png">
 <title>SCHEDULE</title>
 <style>
 	table {
@@ -16,14 +19,10 @@
 
 	td, th {
   		border: 2px solid #7a6f9b;
-  		text-align: left;
+  		text-align: center;
   		padding: 8px;
 	}
     
-    th {
-    	text-align: center;
-    }
-
 	tr:nth-child(even) {
   		background-color: rgba(104,81,85,0.4);
         color: #fff;
@@ -39,11 +38,14 @@
 <img class="logo" src="https://media.discordapp.net/attachments/784390283701256192/1112151803707011102/trims2.png?width=900&height=500" alt="TRIMS LOGO">
 <div class="main">
 	<h1>SCHEDULE</h1>
-	<div class="navbar">
+	<div class="navbar" id="myNav">
 		<ul>
     		<li><a href="contact.html">Contact</a></li>
         	<li><a href="members.html">Members</a></li>
         	<li><a href="schedule.html" class="active">Schedule</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            	<i class="fa fa-bars"></i>
+        	</a>
     	</ul>
 	</div>
     <div class="scheduletable">
@@ -93,5 +95,15 @@
 	</a>
 </div>
 <div class="footer">Copyright 2023 &copy; TRIMS</div>
+<script>
+function myFunction() {
+	var x = document.getElementById("myNav");
+    if (x.className === "navbar") {
+		x.className += " responsive";
+	} else {
+		x.className = "navbar";
+	}
+}
+</script>
 </body>
 </html>
